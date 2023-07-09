@@ -7,6 +7,9 @@ public class CaesarCipher {
 
 
     public CaesarCipher(CharPair[] symbolRanges){
+        if(!symbolRangeChecker(symbolRanges)){
+            throw new IllegalArgumentException("Symbol ranges are incorrect");
+        }
         this.symbolRanges = symbolRanges;
     }
 
@@ -34,6 +37,24 @@ public class CaesarCipher {
             }
         }
         return symbol;
+    }
+
+    private boolean symbolRangeChecker(CharPair[] arr){
+        for(int i = 0 ; i< arr.length; i++){
+            char start = arr[i].getStartSymbol();
+            char end = arr[i].getEndSymbol();
+            if(start>end){
+                return false;
+            }
+            for(int j = i-1 ; j>=0; j--){
+                char prevStart = arr[j].getStartSymbol();
+                char prevEnd= arr[j].getEndSymbol();
+                if( (start>=prevStart && start<=prevEnd) || (end>=prevStart && end<=prevEnd) || (start<prevStart && end>prevEnd)){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     public CharPair[] getSymbolRanges() {
