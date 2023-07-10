@@ -9,12 +9,14 @@ public class CharPair {
         this.endSymbol = endSymbol;
     }
 
-    public char getStartSymbol() {
-        return startSymbol;
-    }
+
 
     public void setStartSymbol(char startSymbol) {
         this.startSymbol = startSymbol;
+    }
+
+    public char getStartSymbol() {
+        return startSymbol;
     }
 
     public char getEndSymbol() {
