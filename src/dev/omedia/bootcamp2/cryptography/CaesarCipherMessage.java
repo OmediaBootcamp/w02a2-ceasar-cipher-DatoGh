@@ -10,7 +10,7 @@ public class CaesarCipherMessage {
         this.shift = shift;
     }
 
-    public int getShift() {
+    public int getShift() {// ეს ესე უნდა ჩანდეს ყველასთვის?
         return shift;
     }
 
@@ -21,7 +21,7 @@ public class CaesarCipherMessage {
     public void setEncryptedString(String encryptedString) {
         this.encryptedString = encryptedString;
     }
-
+// და მერე განახლებაც უნდა შეიძლებოდეს??? !!!
     public void setShift(int shift) {
         this.shift = shift;
     }

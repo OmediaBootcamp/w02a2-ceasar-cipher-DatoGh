@@ -5,6 +5,7 @@ public class CharPair {
     private char endSymbol;
 
     public CharPair(char startSymbol, char endSymbol) {
+    // აქ რომ შეადარო სიმბოლოები ამაზე რას იტყვი? 
         this.startSymbol = startSymbol;
         this.endSymbol = endSymbol;
     }
@@ -22,7 +23,7 @@ public class CharPair {
     public char getEndSymbol() {
         return endSymbol;
     }
-
+// სიმბოლოს ჩასწორება რამდენად კარგი იდეაა?
     public void setEndSymbol(char endSymbol) {
         this.endSymbol = endSymbol;
     }

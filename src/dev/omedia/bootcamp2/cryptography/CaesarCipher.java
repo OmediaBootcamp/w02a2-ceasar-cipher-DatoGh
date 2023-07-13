@@ -1,5 +1,5 @@
 package dev.omedia.bootcamp2.cryptography;
-
+// hmm. ოჰო. 
 import java.util.stream.IntStream;
 
 public class CaesarCipher {
@@ -17,7 +17,7 @@ public class CaesarCipher {
         return new CaesarCipherMessage(encodeString(message,shift),shift);
     }
 
-    public String decrypt(CaesarCipherMessage message){
+    public String decrypt(CaesarCipherMessage message){// ეს მაგარია. რომ კოდის დუპლიაცია არ არის.
         return encodeString(message.getEncryptedString(), -message.getShift()); //uaryofiti shifti igivea rac decode.
     }
 
@@ -43,10 +43,10 @@ public class CaesarCipher {
         for(int i = 0 ; i< arr.length; i++){
             char start = arr[i].getStartSymbol();
             char end = arr[i].getEndSymbol();
-            if(start>end){
+            if(start>end){ ეს 
                 return false;
             }
-            for(int j = i-1 ; j>=0; j--){
+            for(int j = i-1 ; j>=0; j--){// ფორმატირებასაც მივაქციოთ ცოტა ყურადღება.
                 char prevStart = arr[j].getStartSymbol();
                 char prevEnd= arr[j].getEndSymbol();
                 if( (start>=prevStart && start<=prevEnd) || (end>=prevStart && end<=prevEnd) || (start<prevStart && end>prevEnd)){
